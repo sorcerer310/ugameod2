@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#docker run -tdi -p 80:80 -p 8081-8083:8081-8083 -p 6379:6379 -v /opt/docker/ugameod:/opt/ugameod -v /opt/docker/ugamesso:/opt/ugamesso -v /opt/docker/ugameimgserver:/opt/ugameimgserver -v /opt/docker/nginx-html:/usr/share/nginx/html -v /opt/docker/redis/data:/usr/lib/redis --privileged sorcerer310/centos:ugameodv2 init
+#docker run -tdi --name aircraft -p 8180:80 -p 6378:6379 -p 8181-8183:8181-8183 -v /opt/docker-aircraft/nginx-html:/usr/share/nginx/html -v /opt/docker-aircraft/redis/data:/usr/lib/redis -v /opt/docker-aircraft/sso:/opt/aircraft-sso -v /opt/docker-aircraft/od:/opt/aircraft-od --privileged sorcerer310/centos:ugameodv2 init
+
+docker run -tdi --name wechatgame -p 8280:80  -p 8184-8187:8184-8187 -v /opt/docker-wechatgame/wechatgame:/opt/wechatgame -v /opt/docker-wechatgame/nginx-html:/usr/share/nginx/html --privileged sorcerer310/centos:ugameodv2 init
